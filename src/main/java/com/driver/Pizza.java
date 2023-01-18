@@ -11,33 +11,16 @@ public class Pizza {
     private boolean takeaway=false;
 
 
-    public Pizza(Boolean isVeg){
+    public Pizza(Boolean isVeg) {
         this.isVeg = isVeg;
-        if(isVeg==true){
-            price=300;
-            total+=price;
+        if (isVeg == true) {
+            price = 300;
+            total += price;
+        } else {
+            price = 400;
+            total += price;
         }
-        else{
-            price=400;
-            total+=price;
-        }
     }
-
-    public int getPrice(){
-        return this.price;
-    }
-    public void setPrice(int price){
-        this.price=price;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
     public void addExtraCheese(){
         if(extracheese==false) {
             total += 80;
@@ -62,7 +45,16 @@ public class Pizza {
             takeaway=true;
         }
     }
+    public void setPrice(int price){
+        this.price=price;
+    }
 
+    public void setTotal(int total){
+        this.total=total;
+    }
+    public int getPrice(){
+        return total;
+    }
     public String getBill(){
         bill="Base Price Of The Pizza: "+price;
         if(extracheese==true){
@@ -82,4 +74,5 @@ public class Pizza {
         bill+="\nTotal Price: "+total;
         return this.bill;
     }
+
 }
