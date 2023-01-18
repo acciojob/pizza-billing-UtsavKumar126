@@ -64,22 +64,22 @@ public class Pizza {
     }
 
     public String getBill(){
-        bill="Base Price Of The Pizza:"+price;
+        bill="Base Price Of The Pizza: "+price;
         if(extracheese==true){
-            bill+="\nExtra Cheese Added:"+80;
+            bill+="\nExtra Cheese Added: "+80;
         }
         if(extratoppings==true){
             if(isVeg==true){
-                bill+="\nExtra Toppings Added:"+70;
+                bill+="\nExtra Toppings Added: "+70;
             }
             else{
-                bill+="\nExtra Toppings Added:"+120;
+                bill+="\nExtra Toppings Added: "+120;
             }
         }
         if(takeaway==true){
-            bill+="\nPaperbag Added:"+20;
+            bill+="\nPaperbag Added: "+20;
         }
-        bill+="\nTotal Price:"+total;
+        bill+="\nTotal Price: "+total;
         return this.bill;
     }
 }
