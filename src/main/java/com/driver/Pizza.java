@@ -48,10 +48,6 @@ public class Pizza {
     public void setPrice(int price){
         this.price=price;
     }
-
-    public void setTotal(int total){
-        this.total=total;
-    }
     public int getPrice(){
         return total;
     }
@@ -71,7 +67,7 @@ public class Pizza {
         if(takeaway==true){
             bill+="\nPaperbag Added: "+20;
         }
-        bill+="\nTotal Price: "+total;
+        bill+="\nTotal Price: "+total+"\n";
         return this.bill;
     }
 
